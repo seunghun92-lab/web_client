@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+        // head태그안 script 작성 (추천2순위)
+        // javascript 영역
+        console.log('🌽🌽🌽');
+
+        function foo() {
+            console.log('foooooooooo');
+        }
+        // foo();
+
+        // bar(); // Uncaught ReferenceError: bar is not defined
+        
+        // console.log(document.querySelector('h1').innerHTML); // Uncaught TypeError: Cannot read properties of null (reading 'innerHTML')
+    </script>
+</head>
+<body>
+    <h1>JS on web</h1>
+    <ol>
+        <li>
+            on이벤트속성에 작성
+            <button type="button" onclick="alert('🐸🐸🐸');">클릭</button>
+        </li>
+        <li>
+            내부 script태그에 작성
+            <button type="button" onclick="foo(); foo(); foo();">클릭</button>
+        </li>
+        <li>
+            외부 js파일에 작성해서 로드
+            <button type="button" onclick="test();">클릭</button>
+        </li>
+    </ol>
+
+
+    <script src="js/01_js_on_web.js"></script>
+    <script>
+        // body종료태그 직전 (추천1순위)
+        console.log('🥑🥑🥑');
+        // foo();
+
+        function bar(){
+            console.log('baaaaaaaaaaaaarrrrrrrr');
+        }
+
+        console.log(document.querySelector('h1').innerHTML); 
+
+        test(); // 외부 js 함수 호출!
+    </script>
+</body>
+</html>
